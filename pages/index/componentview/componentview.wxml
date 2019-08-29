@@ -1,0 +1,10 @@
+<view style="height:100%;background-color:red">
+  <view style="height:600rpx;background-color:red">
+    <text>welcome to componentview</text>
+  </view>
+  <view style="height:600rpx;background-color:green" bindtap="gotoGoodsComponent">
+    <text>welcome to componentview</text>
+  </view>
+
+  <custom-component-goods></custom-component-goods>
+</view>

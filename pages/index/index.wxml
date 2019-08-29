@@ -1,0 +1,44 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+
+  <view style="width:750rpx;display: grid;grid-template-columns: repeat(auto-fill, 375rpx);">
+    <view>123123</view>
+    <view>456</view>
+    <view>789</view>
+  </view>
+
+  <view bindtap="jumpCustomComponent">link custom component</view>
+
+  <view class='topTabSwiper'>
+    <view class='tab  {{currentData == 0 ? "tabBorer" : ""}}' data-current="0" bindtap='checkCurrent'>推荐</view>
+    <view class='tab  {{currentData == 1 ? "tabBorer" : ""}}' data-current="1" bindtap='checkCurrent'>热点</view>
+    <view class='tab  {{currentData == 2 ? "tabBorer" : ""}}' data-current="2" bindtap='checkCurrent'>关注</view>
+  </view>
+  <swiper current="{{currentData}}" class='swiper' style="height:100px;" duration="300" bindchange="bindchange">
+    <swiper-item>
+      <view class='swiper_con'>welcome come to 推荐</view>
+    </swiper-item>
+    <swiper-item>
+      <view class='swiper_con'>welcome come to 热点</view>
+    </swiper-item>
+    <swiper-item>
+      <view class='swiper_con'>welcome come to 事实</view>
+    </swiper-item>
+  </swiper>
+
+  <view class="verb_center">
+    <view bindtap="gotoLayout">layout test</view>
+    <view bindtap="gotoCustomComponent">custom component</view>  
+  </view>
+
+</view>

@@ -1,0 +1,8 @@
+<view style="display:flex;background-color:red;height:500rpx;flex-direction:column">
+  <view style="background-color:green;">
+    <text>aaa</text>
+  </view>
+  <view style="background-color:yellow;">
+    <text>bbb</text>
+  </view>
+</view>

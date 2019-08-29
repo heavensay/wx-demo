@@ -1,0 +1,27 @@
+target/
+.settings/
+.classpath
+.project
+*.log
+.idea/
+*.iml
+.vagrant/
+.vagrant/*
+
+.DS_Store
+Thumbs.db
+Vagrantfile
+
+rebel.xml
+MerchantBase.properties
+### MAVEN gradle ###
+/target/
+mvnw
+mvnw.cmd
+.mvn/
+/.gradle/
+/gradle/
+dubbo.log.*
+MyCodeGenerator*.java
+MerchantBase-*.properties
+
