@@ -1,0 +1,44 @@
+0微信认证引入步骤与方法：
+
+1如果只需要获取用户userToken，不需要进行授权；可按下面这种写法
+    //app登录完成
+    if (auth.getUserToken().isAppLogin) {
+      //用户已经在小程序初始化时候，已经登录完成，userToken已经生成，可能
+      console.log("auth isapplogin====:" + JSON.stringify(auth.getUserToken()))
+      //dosomething
+    } else {
+      console.log("auth userInfoReadyCallback====222:")
+      //app登录还没完成，需要在回调用中进行操作
+      app.userInfoReadyCallback = (function (userToken) {
+        console.log("auth userInfoReadyCallback====3333:" + JSON.stringify(userToken))
+        //dosomething
+      })
+    }
+
+2如果需要进行授权:
+引入auth：
+2.1引入认证工具js
+var auth = require('../../../utils/authority')
+
+2.2在需要进行授权的事件方法中引入下面代码，然后写具体业务逻辑
+    var authItem = this.selectComponent('#auth-item')
+    authItem.processWxAuth({
+      needUserInfoAuth: true,
+      needMobileAuth: true,
+      authSuccess:function(){
+        wx.showToast({
+          icon: 'none',
+          title: "授权成功啦",
+          duration: 2000
+        })
+        //do something
+      },
+      authFail:function(){
+        wx.showToast({
+          icon: 'none',
+          title: "授权失败",
+          duration: 2000
+        })
+        //do something
+      }
+    })

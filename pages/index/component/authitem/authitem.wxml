@@ -1,0 +1,11 @@
+<view wx:if="{{showUserInfo}}" class="auth-container">
+  <view class="auth-content">
+    <button class="auth-button" open-type="getUserInfo" bindgetuserinfo="getuserinfo">授权微信用户信息</button>
+  </view>
+</view>
+
+<view wx:if="{{showPhoneNumber && !showUserInfo}}" class="auth-container">
+  <view class="auth-content">
+    <button class="auth-button" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">授权微信手机号</button>
+  </view>
+</view>

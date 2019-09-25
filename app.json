@@ -3,7 +3,9 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/index/layout/layout",
-    "pages/index/componentview/componentview"
+    "pages/index/componentview/componentview",
+    "pages/index/auth/auth",
+    "pages/index/viewlist/viewlist"
   ],
   "window": {
     "backgroundTextStyle": "light",

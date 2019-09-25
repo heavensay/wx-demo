@@ -1,0 +1,4 @@
+<view>
+  <button bindtap="needAuthOper">common auth</button>
+  <auth-item id="auth-item"></auth-item>
+</view>

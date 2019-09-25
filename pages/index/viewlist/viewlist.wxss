@@ -1,0 +1,4 @@
+.view-item{
+  background-color: red;
+  height: 200rpx;
+}

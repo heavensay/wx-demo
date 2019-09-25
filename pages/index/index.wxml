@@ -39,6 +39,8 @@
   <view class="verb_center">
     <view bindtap="gotoLayout">layout test</view>
     <view bindtap="gotoCustomComponent">custom component</view>  
+    <view bindtap="gotoCustomAuth">wx auth</view>
+    <view bindtap="gotoViewList">view list</view>   
   </view>
 
 </view>
